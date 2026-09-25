@@ -1,0 +1,3 @@
+25/09/2026
+
+O gerador de senhas terá 2 tipos por enquanto: letras minúsculas e letras maiúsculas. Se o tipo for 0, será minúscula; caso contrário, será maiúscula. Cada repetição deve gerar apenas um caractere, então não necessariamente serão 2 push() para o mesmo número aleatório.
