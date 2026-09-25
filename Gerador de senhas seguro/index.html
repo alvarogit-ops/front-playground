@@ -4,13 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador de Senhas</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <h1>Tamanho da Senha</h1>
-    <label for="tamanho">Tamanho</label>
-    <input type="number" name="tamanho" id="tamanho">
-    <button>Gerar senha</button>
+    <h1>Gerador</h1>
     <div id="div-resultado"></div>
+    <h2>Opções</h2>
+    <label for="tamanho">Largura</label>
+    <div><input type="number" name="tamanho" id="tamanho" placeholder="14"></div>
+    <h2>Incluir</h2>
+    <div><input type="checkbox" name="maiusculas" id="maiusculas"> A - Z</div>
+    <div><input type="checkbox" name="minusculas" id="minusculas"> a - z</div>
+     <div><input type="checkbox" name="numeros" id="numeros">0 - 9</div>
+     <div><input type="checkbox" name="simbolos" id="simbolos">%$!@</div>
+    <button>Gerar senha</button>
     <script src="script.js"></script> 
 </body>
 </html>
