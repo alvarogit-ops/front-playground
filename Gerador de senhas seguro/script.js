@@ -72,6 +72,43 @@ botao.addEventListener('click', () => {
         caracteres.push(tipo[arredondamento])
     }
 
+    function ForcadaSenha(senha){
+    let pontos = 0
+
+    if (senha.length >= 6) pontos ++
+    if (senha.length >= 12) pontos ++
+    if (/[A-Z]/.test(senha)) pontos ++
+    if (/[a-z]/.test(senha)) pontos ++
+    if (/[^A-Za-z0-9]/.test(senha)) pontos ++
+
+    if (pontos <=2) return 'Fraca'
+
+    if (pontos <=4) return 'Mediana'
+
+    return 'Forte'
+}
+
+
+let forca = ForcadaSenha(novo_resultado)
+let elementoForca = document.getElementById("forca")
+elementoForca.innerText = 'Força' + forca
+
+elementoForca.classList.remove('text-red-600', 'text-yellow-600', 'text-green-600')
+
+if (forca == 'Fraca'){
+    elementoForca.classList.add('text-red-600')
+}
+
+if (forca == 'Mediana'){
+    elementoForca.classList.add('text-yellow-600')
+}
+
+
+if (forca == 'Forte'){
+    elementoForca.classList.add('text-green-600')
+}
+    
+
     novo_resultado = caracteres.join('')
     span_senha.innerText = novo_resultado
     botao_copiar.classList.remove('hidden')
@@ -79,6 +116,8 @@ botao.addEventListener('click', () => {
 
     
 })
+
+
 
 
 botao_copiar.addEventListener('click', () => {
